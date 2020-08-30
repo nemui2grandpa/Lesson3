@@ -16,20 +16,27 @@ import com.example.kotlinlog.R
     class MainActivity : AppCompaActvity()とは、
     MainActivityクラスは親であるAppCompaActivityクラスの機能を引き継いでいるとの意味。
      */
-    class MainActivity : AppCompatActivity() {
+
+    public class MainActivity : AppCompatActivity() {
+
 
         override fun onCreate(savedInstanceState: Bundle?) {
+            //app conpactアクティビティ　＝根幹となるもの
+            //↑ocCreate
+            //
+
             super.onCreate(savedInstanceState)
+            //savedInstanceState＝アプリ起動時に実行されるもの
+
             setContentView(R.layout.activity_main)
+            //R.layout.activity_main
+            //「savedInstanceState」を持ってこい！！って言ってる。
 
-
-            //class Dog（別フォルダ）に因数（"ポチ",3）を入れる。
-            val dog = Dog("ポチ",3)// 名前をポチ、3歳
-            // Array<Int>型の配列が作成される
-            //arrayof=コレクション
-
-            //関数move()を引数を入れたdogを含めた状態で。
-            dog.move()
+            val human = Human("太郎",5,"ギター")
+            val human2 = Human("華太郎",6,"読書")
+                //say、thinkメソッドのインスタンスをふたつ作る
+                human2.say()
+                human2.think()
 
         }
     }
