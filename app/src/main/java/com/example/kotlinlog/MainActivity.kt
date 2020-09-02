@@ -32,9 +32,15 @@ import com.example.kotlinlog.R
             //R.layout.activity_main
             //「savedInstanceState」を持ってこい！！って言ってる。
 
-            val human = Human("太郎",5,"ギター")
+            //val　インスタンス = クラスのHuman (引数)
+            //コンストラクターを呼び出してインスタンス化する。
+            //セカンダリの場合はconstructorは省略不可
+
+            val human =Human ("太郎",5,"ギター")
             val human2 = Human("華太郎",6,"読書")
                 //say、thinkメソッドのインスタンスをふたつ作る
+                human.say()
+                human.think()
                 human2.say()
                 human2.think()
 
